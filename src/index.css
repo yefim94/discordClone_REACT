@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #37393E;
+}
+.app-cont > * {
+  transition: all 1s linear;
+}
+.app-cont {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  transition: all 1s linear;
+}
+.app-cont > section {
+  overflow: hidden;
+}
+.app-cont > section:nth-child(1) {
+  flex: 0 0 auto;
+  background-color: #202225;
+  padding: 1.5em;
+}
+.app-cont > section:nth-child(2) {
+  flex: 0 0 auto;
+  background-color: #2F3136;
+}
+.app-cont > section:nth-child(3) {
+  padding: 1.5em;
+  flex: 1 0 auto;
+  background-color: #37393E;
+}
+.app-cont > section:nth-child(4) {
+  padding: 1.5em;
+  flex: 0 0 auto;
+  background-color: #2F3136;
+}
+.logo {
+  background-color: #37393E;
+  border-radius: 50%;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+  transform: translateX(-2px);
+}
+.logo:hover {
+  background-color: #5A65EA;
+  border-radius: 20px;
+  transition: all 0.2s linear;
+}
+[class *= "-icon"] {
+  background-color: #37393E;
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7em;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+}
+[class *= "-icon"]:hover {
+  border-radius: 20px;
+  transition: all 0.2s linear;
+  background-color: #5AA364;
+}
+[class *= "-icon"]:hover svg {
+  fill: white;
+}
+[class *= "-icon"]:hover svg > line {
+  stroke: white;
+}
+.left-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.icons-cont img {
+  transition: 0.1s all linear;
+  border-radius: 50%;
+}
+.icons-cont img:hover {
+  border-radius: 20px;
+}
+.chat-cont {
+  margin-top: 0.7em;
+  padding: 1em;
+}
+.chat-top div {
+  text-transform: uppercase;
+  color: #8F9296;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+}
+.chat-bottom span {
+  color: #8F9296;
+  margin-left: 1em;
+  font-weight: 650;
+}
+.chat-cont .chat-bottom:nth-child(1) > span:first-child {
+  color: #fff;
+}
+.chat-bottom div {
+  background-color: #3A3C42;
+  border-radius: 6px;
+  padding: 0.6em;
+  transition: all 1s linear;
+}
+.chat-bottom div:hover {
+  background-color: #454649;
+  color: rgb(182, 182, 182);
+}
+.ds {
+  position: relative;
+  z-index: 1;
+}
+.ds::before {
+  content: '';
+  width: 15px;
+  right: -2px;
+  bottom: -2px;
+  border: 4px solid #2F3136;
+  height: 15px;
+  border-radius: 50%;
+  background-image: url('https://cdn.discordapp.com/attachments/830592909001621548/862048632588730388/Untitled-9.png');
+  background-color: #5AA364;
+  position: absolute;
+}
