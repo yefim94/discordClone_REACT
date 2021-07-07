@@ -18,15 +18,28 @@ const Middle = ({messages, setMessages, inputText,
   return (
     <section className="middle-cont" style={{
       display: "flex", 
-      alignItems: "flex-end"
+      flexDirection: "column",
+      justifyContent: "stretch",
+      overflowY: "scroll",
+      position: "relative"
     }}>
-      {messages.map(message => {
+      {messages.map(message => 
        <Message 
         text={message.text} 
         key={message.id} 
        />
-      })}
-      <form onSubmit={handleSubmit} style={{width: "100%", marginRight: "2em"}}>
+      )}
+      <form onSubmit={handleSubmit} style={{
+        width: "100%", 
+        position: "absolute",
+        left: "0",
+        right: '0',
+        bottom: '0',
+        paddingLeft: "1em",
+        backgroundColor: '#37393E',
+        paddingRight: "1em",
+        paddingBottom: "1em"
+        }}>
         <input value={inputText} onChange={handleInputText} style={{
           width: "100%",
           borderSizing: "border-box",
